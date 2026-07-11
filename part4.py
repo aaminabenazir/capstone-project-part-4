@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyObHKAWr1GErY4O1Ar9a+EK",
+      "authorship_tag": "ABX9TyNo3Y5rze7kmzzpS1Guiy/x",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -35,8 +35,10 @@
         "import pandas as pd\n",
         "import re\n",
         "import time\n",
+        "# This grabs the key you already saved in the Render dashboard\n",
+        "os.environ['LLM_API_KEY'] = os.environ.get('OPENROUTER_API_KEY')\n",
         "\n",
-        "# 1. Securely load API Key\n",
+        "'''# 1. Securely load API Key\n",
         "try:\n",
         "    with open('use.env', 'r') as f:\n",
         "        content = f.read().strip()\n",
@@ -44,7 +46,7 @@
         "        os.environ['LLM_API_KEY'] = key\n",
         "        print(\"API Key loaded successfully.\")\n",
         "except Exception as e:\n",
-        "    print(f\"Error loading use.env: {e}\")\n",
+        "    print(f\"Error loading use.env: {e}\")'''\n",
         "\n",
         "# 2. Load Data from Part 3\n",
         "try:\n",
